@@ -1,4 +1,9 @@
+import { useSelector } from 'react-redux';
+
 const NavBar = ()=>{
+  const user = useSelector((store)=>store.user);
+  const url = user.photoUrl;
+  console.log(user,'user');
     return ( <div className="navbar bg-base-100">
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">ChatApp</a>
@@ -12,7 +17,7 @@ const NavBar = ()=>{
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  src={url} />
               </div>
             </div>
             <ul
@@ -21,7 +26,7 @@ const NavBar = ()=>{
               <li>
                 <a className="justify-between">
                   Profile
-                  <span className="badge">New</span>
+                  <span className="badge">welcome {user.fname}</span>
                 </a>
               </li>
               <li><a>Settings</a></li>
