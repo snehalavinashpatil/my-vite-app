@@ -1,6 +1,5 @@
 import EditProfile from './component/EditProfile';
 import { useSelector } from "react-redux";
-import UserCard from './component/userCard';
 
 const Profile = ()=>{
     const user = useSelector(store=>store.user);
