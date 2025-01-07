@@ -3,8 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Body from "./Body";
 import Login from './Login';
-import Profile from './Profile';
-import Feed from './Feed';
 import Connections from './component/Connections';
 import Requests from './component/Requests';
 import { Provider } from 'react-redux';
