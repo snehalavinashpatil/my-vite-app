@@ -11,7 +11,7 @@ const navigate=useNavigate();
 const userData = useSelector((store)=>store.user);
     const fetchUser = async ()=>{
        if(userData)return;
-      // console.log(userData,'userData');
+       console.log(userData,'fetchUser');
         try{
          const result = await axios.get(BASE_URL+"/profile/view" ,{ withCredentials: true });
          console.log(result.data,'result');
