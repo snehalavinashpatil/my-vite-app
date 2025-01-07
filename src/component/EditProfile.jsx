@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UserCard from './UserCard';
+//import UserCard from './UserCard';
 import axios from "axios";
 import {BASE_URL} from '../utils/constant';
 import { useDispatch } from "react-redux";
@@ -105,7 +105,7 @@ const EditProfile = ({user})=>{
    </div>
  </div>
      </div>
-     <UserCard user={{fname,lname,gender,about,company,photoUrl,skills}}/>
+     {/* <UserCard user={{fname,lname,gender,about,company,photoUrl,skills}}/> */}
      </div>
      )
 }
