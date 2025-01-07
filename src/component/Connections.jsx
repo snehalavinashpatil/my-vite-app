@@ -11,12 +11,11 @@ const Connections =()=>{
     const fetchConnections = async ()=>{
         try{
            const res = await axios.get(`${BASE_URL}/user/connections`, { withCredentials: true });
-            console.log('Connections',res?.data);
             const connections = Array.isArray(res?.data) ? res.data : [res.data];
            dispatch(addConnection(connections));
             //return navigate("/login");
           }catch(err){
-              console.log(err);
+             // console.log(err);
           }
     }
 
@@ -24,7 +23,6 @@ const Connections =()=>{
         fetchConnections()
     },[]);
 
-    console.log(connections,'connections');
    
     if (!connections || !Array.isArray(connections)) {
         return <div>No connections available.</div>;
@@ -38,7 +36,6 @@ const Connections =()=>{
           {connections.map((connection,index) => {
             const {  fname,lname ,photoUrl, age, gender, about, skills } =
               connection.data[0];
-    console.log(fname,lname ,photoUrl, age, gender, about, skills);
             return (
               <div
                 key={index}
