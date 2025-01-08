@@ -30,7 +30,11 @@ const Feed = () => {
 
     return (
         <div className="flex justify-center my-10">
-            <UserCard user={feed[0]} />
+            if(feed[0]){
+                <UserCard user={feed[0]} />
+            }else{
+                <h1>No User Found...</h1>
+            }
         </div>
     );
 };
