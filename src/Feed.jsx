@@ -3,7 +3,7 @@ import { BASE_URL } from "./utils/constant";
 import { useDispatch, useSelector } from "react-redux";
 import { addFeed } from "./utils/feedSlice";
 import { useEffect } from "react";
-import UserCard from "./component/userCard";
+//import UserCard from "./component/userCard";
 
 const Feed = () => {
     const feed = useSelector((store) => store?.feed); // Adjust path if necessary
@@ -30,11 +30,7 @@ const Feed = () => {
 
     return (
         <div className="flex justify-center my-10">
-            if(feed[0]){
-                <UserCard user={feed[0]} />
-            }else{
-                <h1>No User Found...</h1>
-            }
+            {/* <UserCard user={feed[0]} /> */}
         </div>
     );
 };
