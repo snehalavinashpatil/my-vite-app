@@ -16,7 +16,7 @@ const Login = ()=>{
         try{
             const res = await axios.post(BASE_URL+'/login', { emailId, password }, { withCredentials: true });
             dispatch(addUser(res.data));
-            return navigate("/");
+            return navigate("/feed");
         }catch(err){
           setError(err?.response?.data || 'Invalid Credentials');
         }

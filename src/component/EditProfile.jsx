@@ -3,6 +3,7 @@ import axios from "axios";
 import {BASE_URL} from '../utils/constant';
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSilce"; 
+import UserCard from './UserCard';
 
 const EditProfile = ({user})=>{
     
@@ -104,7 +105,7 @@ const EditProfile = ({user})=>{
    </div>
  </div>
      </div>
-     
+     <UserCard user={{fname,lname,gender,about,company,photoUrl,skills}}/> 
      </div>
      )
 }
